@@ -1,11 +1,11 @@
 author:
   # 关键：确保你的头像文件放在 /images/ 文件夹下，并命名为 profile.png
-  avatar           : "profile.png" 
-  name             : "Xin Ma"
+  avatar           : "katong.png" 
+  name             : "Shiming Fan"
   bio              : "Postgraduate Student in AI @ Sichuan University" # 简介
   location         : "Chengdu, China"
-  employer         : "Sichuan University"
-  email            : "你的邮箱@stu.scu.edu.cn" 
+  employer         : "Shandong University of Business and Technology"
+  email            : "2024410061@stu.scu.edu.cn" 
 
   # 学术链接（留空的不会显示）
   googlescholar    : "你的谷歌学术链接"
