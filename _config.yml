@@ -1,3 +1,13 @@
+# Basic Site Settings
+locale                   : "en-US"
+site_theme               : "default"
+title                    : "Xin Ma's Homepage"      # 浏览器标签页显示的标题
+title_separator          : "-"
+name                     : &name "Xin Ma"           # 你的名字
+description              : &description "Xin Ma's personal academic website."
+url                      : "https://Cola-Fsm.github.io" 
+baseurl                  : "" 
+repository               : "Cola-Fsm/Cola-Fsm.github.io"
 author:
   # 关键：确保你的头像文件放在 /images/ 文件夹下，并命名为 profile.png
   avatar           : "katong.png" 
