@@ -28,7 +28,6 @@
             padding: 0 30px;
         }
 
-        /* 头部布局 */
         header {
             display: flex;
             align-items: center;
@@ -39,27 +38,15 @@
         .avatar {
             width: 180px;
             height: 180px;
-            border-radius: 8px; /* 稍微带一点圆角的方形，比纯圆更有高级感 */
+            border-radius: 8px;
             object-fit: cover;
-            filter: grayscale(10%); /* 微灰度处理，更严肃 */
+            filter: grayscale(10%);
         }
 
-        .intro h1 {
-            font-size: 2.4rem;
-            margin: 0 0 10px 0;
-            font-weight: 700;
-        }
+        .intro h1 { font-size: 2.4rem; margin: 0 0 10px 0; font-weight: 700; }
+        .intro p { font-size: 1.15rem; color: var(--primary-color); margin: 0; }
 
-        .intro p {
-            font-size: 1.15rem;
-            color: var(--primary-color);
-            margin: 0;
-        }
-
-        /* 社交链接 */
-        .links {
-            margin-top: 15px;
-        }
+        .links { margin-top: 15px; }
         .links a {
             color: var(--accent-color);
             text-decoration: none;
@@ -69,9 +56,8 @@
         }
         .links a:hover { text-decoration: underline; }
 
-        /* 通用章节样式 */
         h2 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             border-bottom: 1px solid #eaeaea;
             padding-bottom: 8px;
             margin-top: var(--section-gap);
@@ -80,57 +66,55 @@
             letter-spacing: 1px;
         }
 
-        /* 论文列表 */
-        .pub-list {
-            list-style: none;
-            padding: 0;
-        }
-        .pub-item {
-            margin-bottom: 25px;
-            position: relative;
-        }
+        .pub-list { list-style: none; padding: 0; }
+        .pub-item { margin-bottom: 30px; }
+        
         .pub-title {
-            font-weight: 600;
-            font-size: 1.05rem;
+            font-weight: 700;
+            font-size: 1.1rem;
             display: block;
+            line-height: 1.4;
             margin-bottom: 4px;
         }
-        .pub-authors {
-            color: var(--secondary-color);
-            font-size: 0.95rem;
-        }
-        .pub-venue {
+        
+        .pub-authors { color: #555; font-size: 0.95rem; }
+        
+        .badge {
+            background: #f0f0f0;
+            color: #444;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
             font-weight: 600;
-            color: #d35400; /* 给会议名一个低调的暗橘色突出 */
-            font-size: 0.9rem;
-            margin-right: 10px;
-        }
-        .pub-links a {
-            font-size: 0.85rem;
-            color: var(--accent-color);
-            text-decoration: none;
-            margin-right: 8px;
-            border: 1px solid var(--accent-color);
-            padding: 1px 6px;
-            border-radius: 3px;
-        }
-        .pub-links a:hover {
-            background-color: var(--accent-color);
-            color: #fff;
+            border: 1px solid #ddd;
+            margin-left: 8px;
         }
 
-        /* 服务与经历 */
-        .service-list {
-            margin: 0;
-            padding-left: 20px;
+        .pub-links { margin-top: 8px; }
+        .pub-links a {
+            text-decoration: none;
+            color: var(--accent-color);
+            font-size: 0.85rem;
+            border: 1px solid var(--accent-color);
+            padding: 1px 10px;
+            border-radius: 3px;
+            margin-right: 8px;
+            transition: all 0.2s;
         }
-        .service-list li {
-            margin-bottom: 8px;
+        .pub-links a:hover { background: var(--accent-color); color: #fff; }
+
+        .service-tag {
+            background: #f0f4f8;
+            color: #2c3e50;
+            border: 1px solid #d1d9e0;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.88rem;
+            font-weight: 600;
         }
 
         @media (max-width: 768px) {
             header { flex-direction: column; text-align: center; gap: 20px; }
-            .container { margin-top: 40px; }
         }
     </style>
 </head>
@@ -138,15 +122,15 @@
 
 <div class="container">
     <header>
-        <img src="images/katong.png" alt="Shiming Fan" class="avatar">
+        <img src="profile.jpg" alt="Shiming Fan" class="avatar">
         <div class="intro">
             <h1>Shiming Fan (樊世明)</h1>
             <p>Second-year Postgraduate Researcher</p>
-            <p style="color: var(--secondary-color);">Specializing in Time Series Analysis & Machine Learning</p>
+            <p style="color: var(--secondary-color);">Time Series Analysis & Machine Learning</p>
             <div class="links">
-                <a href="2024410061@sdtbu.edu.cn">Email</a>
+                <a href="mailto:2024410061@sdtbu.edu.cn">Email</a>
                 <a href="https://github.com/Cola-Fsm" target="_blank">GitHub</a>
-                <a href="https://www.gupiaoq.com/citations?user=miWll1IAAAAJ&hl=zh-CN&oi=sra">Google Scholar</a>
+                <a href="https://www.gupiaoq.com/citations?user=miWll1IAAAAJ&hl=zh-CN&oi=sra" target="_blank">Google Scholar</a>
             </div>
         </div>
     </header>
@@ -155,98 +139,99 @@
         <h2>About Me</h2>
         <p>
             I am a second-year postgraduate researcher specializing in <strong>Time Series Analysis</strong> and <strong>Machine Learning</strong>. 
-            My work focuses on developing robust and efficient algorithms for complex data patterns, with contributions 
-            featured in premier academic venues including <strong>WWW</strong>, <strong>ACL</strong>, and <strong>ICML</strong>.
+            My research focus involves developing robust and efficient algorithms for complex temporal data patterns. 
+            My work has been recognized in premier academic venues, including <strong>WWW</strong>, <strong>ACL</strong>, and <strong>ICML</strong>.
         </p>
     </section>
 
     <section id="publications">
         <h2>Selected Publications</h2>
-<ul class="pub-list">
-    <li class="pub-item">
-        <span class="pub-title">What If We Let Forecasting Forget? A Sparse Bottleneck for Cross-Variable Dependencies</span>
-        <span class="pub-authors">Fan Zhang, <strong>Shiming Fan<sup>‡</sup></strong>, Hua Wang</span><br>
-        <span class="pub-venue">ICML 2025 (CCF A)</span>
-        <span class="pub-links"><a href="https://arxiv.org/pdf/2605.08289">Paper</a> <a href="https://github.com/Cola-Fsm/MS-FLOW">Code</a></span>
-    </li>
-    <li class="pub-item">
-        <span class="pub-title">TimeSAF: Towards LLM-Guided Semantic Asynchronous Fusion for Time Series Forecasting</span>
-        <span class="pub-authors">Fan Zhang, <strong>Shiming Fan<sup>‡</sup></strong>, Hua Wang</span><br>
-        <span class="pub-venue">ACL 2026 (CCF A)</span>
-        <span class="pub-links"><a href="https://arxiv.org/pdf/2604.12648">Paper</a></span>
-    </li>
-    <li class="pub-item">
-        <span class="pub-title">Time-TK: A Multi-Offset Temporal Interaction Framework Combining Transformer and Kolmogorov-Arnold Networks for Time Series Forecasting</span>
-        <span class="pub-authors">Fan Zhang, <strong>Shiming Fan<sup>‡</sup></strong>, Hua Wang</span><br>
-        <span class="pub-venue">WWW 2026 (CCF A)</span>
-        <span class="pub-links"><a href="https://dl.acm.org/doi/abs/10.1145/3774904.3792618">Paper</a><a href="https://github.com/Cola-Fsm/Time-TK">Code</a></span>
-    </li>
+        <ul class="pub-list">
+            
+            <li class="pub-item">
+                <span class="pub-title">What If We Let Forecasting Forget? A Sparse Bottleneck for Cross-Variable Dependencies</span>
+                <span class="pub-authors">Fan Zhang, <strong>Shiming Fan<sup>‡</sup></strong>, Hua Wang</span><br>
+                <div style="margin: 5px 0;">
+                    <span style="color: #d35400; font-weight: 700;">ICML 2025</span><span class="badge">CCF A</span>
+                </div>
+                <div class="pub-links">
+                    <a href="https://arxiv.org/pdf/2605.08289" target="_blank">Paper</a>
+                    <a href="https://github.com/Cola-Fsm/MS-FLOW" target="_blank">Code</a>
+                </div>
+            </li>
 
+            <li class="pub-item">
+                <span class="pub-title">TimeSAF: Towards LLM-Guided Semantic Asynchronous Fusion for Time Series Forecasting</span>
+                <span class="pub-authors">Fan Zhang, <strong>Shiming Fan<sup>‡</sup></strong>, Hua Wang</span><br>
+                <div style="margin: 5px 0;">
+                    <span style="color: #d35400; font-weight: 700;">ACL 2026</span><span class="badge">CCF A</span>
+                </div>
+                <div class="pub-links">
+                    <a href="https://arxiv.org/pdf/2604.12648" target="_blank">Paper</a>
+                </div>
+            </li>
 
-<li class="pub-item" style="margin-bottom: 24px;">
-    <span class="pub-title" style="font-weight: 700; font-size: 1.1rem; display: block; line-height: 1.4;">
-        CAWformer: A cross variable attention with discrete wavelet denoising for multivariate time series forecasting
-    </span>
-    <span class="pub-authors" style="color: #555;">
-        <strong>Shiming Fan</strong>, Fan Zhang, Hua Wang
-    </span><br>
-    <div style="display: flex; align-items: center; gap: 10px; margin: 5px 0;">
-        <span class="pub-venue">Knowledge-Based Systems (KBS), 2025</span>
-        <span style="background: #f0f0f0; color: #444; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; border: 1px solid #ddd; letter-spacing: 0.5px;">JCR Q1 / TOP Journal</span>
-    </div>
-    <span class="pub-links">
-        <a href="https://www.sciencedirect.com/science/article/pii/S1568494626003923" target="_blank" style="text-decoration: none; color: #0056b3; font-size: 0.9rem; border: 1px solid #0056b3; padding: 1px 8px; border-radius: 3px; margin-right: 8px;">Paper</a>
-        <a href="https://github.com/Cola-Fsm/CAWformer" target="_blank" style="text-decoration: none; color: #0056b3; font-size: 0.9rem; border: 1px solid #0056b3; padding: 1px 8px; border-radius: 3px;">Code</a>
-    </span>
-</li>
+            <li class="pub-item">
+                <span class="pub-title">Time-TK: A Multi-Offset Temporal Interaction Framework Combining Transformer and KAN for Time Series Forecasting</span>
+                <span class="pub-authors">Fan Zhang, <strong>Shiming Fan<sup>‡</sup></strong>, Hua Wang</span><br>
+                <div style="margin: 5px 0;">
+                    <span style="color: #d35400; font-weight: 700;">WWW 2026</span><span class="badge">CCF A</span>
+                </div>
+                <div class="pub-links">
+                    <a href="https://dl.acm.org/doi/abs/10.1145/3774904.3792618" target="_blank">Paper</a>
+                    <a href="https://github.com/Cola-Fsm/Time-TK" target="_blank">Code</a>
+                </div>
+            </li>
 
-<li class="pub-item" style="margin-bottom: 24px;">
-    <span class="pub-title" style="font-weight: 700; font-size: 1.1rem; display: block; line-height: 1.4;">
-        FSMamba: A Dual-Expert Architecture with Fast Global Attention and Local-Enhanced State-space Mamba for Time Series Forecasting
-    </span>
-    <span class="pub-authors" style="color: #555;">
-        <strong>Shiming Fan</strong>, Fan Zhang, Hua Wang
-    </span><br>
-    <div style="display: flex; align-items: center; gap: 10px; margin: 5px 0;">
-        <span class="pub-venue">Knowledge-Based Systems (KBS), 2025</span>
-        <span style="background: #f0f0f0; color: #444; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; border: 1px solid #ddd; letter-spacing: 0.5px;">JCR Q1 / TOP Journal</span>
-    </div>
-    <span class="pub-links">
-        <a href="https://www.sciencedirect.com/science/article/pii/S0950705125022671" target="_blank" style="text-decoration: none; color: #0056b3; font-size: 0.9rem; border: 1px solid #0056b3; padding: 1px 8px; border-radius: 3px; margin-right: 8px;">Paper</a>
-        <a href="https://github.com/Cola-Fsm/FSMamba" target="_blank" style="text-decoration: none; color: #0056b3; font-size: 0.9rem; border: 1px solid #0056b3; padding: 1px 8px; border-radius: 3px;">Code</a>
-    </span>
-</li>
-</ul>
+            <li class="pub-item">
+                <span class="pub-title">CAWformer: A cross variable attention with discrete wavelet denoising for multivariate time series forecasting</span>
+                <span class="pub-authors"><strong>Shiming Fan</strong>, Fan Zhang, Hua Wang</span><br>
+                <div style="margin: 5px 0;">
+                    <span style="color: #d35400; font-weight: 700;">Knowledge-Based Systems (KBS), 2025</span><span class="badge">JCR Q1 / TOP Journal</span>
+                </div>
+                <div class="pub-links">
+                    <a href="https://www.sciencedirect.com/science/article/pii/S1568494626003923" target="_blank">Paper</a>
+                    <a href="https://github.com/Cola-Fsm/CAWformer" target="_blank">Code</a>
+                </div>
+            </li>
 
-<p style="font-size: 0.85rem; color: #888; margin-top: 10px;">
-    <i>‡: Corresponding student lead.</i>
-</p>
+            <li class="pub-item">
+                <span class="pub-title">FSMamba: A Dual-Expert Architecture with Fast Global Attention and Local-Enhanced Mamba for Time Series Forecasting</span>
+                <span class="pub-authors"><strong>Shiming Fan</strong>, Fan Zhang, Hua Wang</span><br>
+                <div style="margin: 5px 0;">
+                    <span style="color: #d35400; font-weight: 700;">Knowledge-Based Systems (KBS), 2025</span><span class="badge">JCR Q1 / TOP Journal</span>
+                </div>
+                <div class="pub-links">
+                    <a href="https://www.sciencedirect.com/science/article/pii/S0950705125022671" target="_blank">Paper</a>
+                    <a href="https://github.com/Cola-Fsm/FSMamba" target="_blank">Code</a>
+                </div>
+            </li>
+        </ul>
+        <p style="font-size: 0.85rem; color: #888; margin-top: 10px;"><i>‡: Corresponding student lead.</i></p>
     </section>
 
-<section id="services">
-    <h2>Academic Service</h2>
-    <div style="display: flex; flex-direction: column; gap: 20px;">
-        <div>
-            <h3 style="font-size: 0.95rem; color: var(--secondary-color); text-transform: uppercase; margin-bottom: 12px; letter-spacing: 0.5px;">Conference Reviewer</h3>
-            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-                <span style="background: #f0f4f8; color: #2c3e50; border: 1px solid #d1d9e0; padding: 4px 12px; border-radius: 15px; font-size: 0.88rem; font-weight: 600;">ICML</span>
-                <span style="background: #f0f4f8; color: #2c3e50; border: 1px solid #d1d9e0; padding: 4px 12px; border-radius: 15px; font-size: 0.88rem; font-weight: 600;">NeurIPS</span>
-                <span style="background: #f0f4f8; color: #2c3e50; border: 1px solid #d1d9e0; padding: 4px 12px; border-radius: 15px; font-size: 0.88rem; font-weight: 600;">ACM MM</span>
-                <span style="color: #888; padding: 4px 5px; font-size: 0.85rem;">and more...</span>
+    <section id="services">
+        <h2>Academic Service</h2>
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+            <div>
+                <h3 style="font-size: 0.9rem; color: var(--secondary-color); text-transform: uppercase; margin-bottom: 12px;">Conference Reviewer</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                    <span class="service-tag">ICML</span>
+                    <span class="service-tag">NeurIPS</span>
+                    <span class="service-tag">ACM MM</span>
+                    <span style="color: #888; font-size: 0.85rem; align-self: center;">etc.</span>
+                </div>
+            </div>
+            <div>
+                <h3 style="font-size: 0.9rem; color: var(--secondary-color); text-transform: uppercase; margin-bottom: 12px;">Journal Reviewer</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                    <span class="service-tag" style="border-left: 3px solid #d35400; border-radius: 4px;">Neural Networks</span>
+                    <span class="service-tag" style="border-left: 3px solid #d35400; border-radius: 4px;">Knowledge-Based Systems (KBS)</span>
+                    <span style="color: #888; font-size: 0.85rem; align-self: center;">etc.</span>
+                </div>
             </div>
         </div>
-
-        <div>
-            <h3 style="font-size: 0.95rem; color: var(--secondary-color); text-transform: uppercase; margin-bottom: 12px; letter-spacing: 0.5px;">Journal Reviewer</h3>
-            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-                <span style="border-left: 3px solid #d35400; background: #fffcf9; padding: 5px 15px; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">Neural Networks</span>
-                <span style="border-left: 3px solid #d35400; background: #fffcf9; padding: 5px 15px; font-size: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">Knowledge-Based Systems (KBS)</span>
-                  <span style="color: #888; padding: 4px 5px; font-size: 0.85rem;">and more...</span>
-            </div>
-        </div>
-    </div>
-</section>
-
+    </section>
 </div>
 
 </body>
