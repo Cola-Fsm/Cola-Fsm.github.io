@@ -90,6 +90,13 @@
             margin-left: 8px;
         }
 
+        .badge.spotlight {
+            background: #fff3e8;
+            color: #d35400;
+            border-color: #f0b58f;
+            font-weight: 700;
+        }
+
         .pub-links { margin-top: 8px; }
         .pub-links a {
             text-decoration: none;
@@ -140,13 +147,15 @@
         <p>
             I am a second-year postgraduate researcher specializing in <strong>Time Series Analysis</strong> and <strong>Machine Learning</strong>. 
             My research focus involves developing robust and efficient algorithms for complex temporal data patterns. 
-            My work has been recognized in premier academic venues, including <strong>WWW</strong>, <strong>ACL</strong>, and <strong>ICML</strong>.
+            My work has been recognized in premier academic venues, including <strong>TKDE</strong>, <strong>NIPS</strong>, <strong>ICML</strong>, and <strong>ACL</strong>.
         </p>
     </section>
 
     <section id="publications">
         <h2>Selected Publications</h2>
         <ul class="pub-list">
+
+
             <li class="pub-item">
                 <span class="pub-title">Rethinking Activation Function: A Simple Path to Efficient and Accurate Time Series Forecasting</span>
                 <span class="pub-authors">Fan Zhang, <strong>Shiming Fan<sup>‡</sup></strong>, Hua Wang</span><br>
@@ -154,11 +163,17 @@
                     <span style="color: #d35400; font-weight: 700;">TKDE 2026</span><span class="badge">CCF A</span>
                 </div>
                 <div class="pub-links">
-                    <!-- <a href="https://arxiv.org/pdf/2605.08289" target="_blank">Paper</a> -->
+                    <a href="https://ieeexplore.ieee.org/abstract/document/11622841" target="_blank">Paper</a>
                     <a href="https://github.com/Cola-Fsm/TFPPA" target="_blank">Code</a>
                 </div>
             </li>
-
+            <li class="pub-item">
+                <span class="pub-title">Volatility-Whitened Probabilistic Residual Modeling for Long-Term Time Series Forecasting</span>
+                 <span class="pub-authors">Fan Zhang, <strong>Shiming Fan<sup>‡</sup></strong>, Hua Wang</span><br>
+                <div style="margin: 5px 0;">
+                    <span style="color: #d35400; font-weight: 700;">NeurIPS 2026</span><span class="badge">CCF A</span><span class="badge spotlight">Spotlight</span>
+                </div>
+            </li>
             <li class="pub-item">
                 <span class="pub-title">What If We Let Forecasting Forget? A Sparse Bottleneck for Cross-Variable Dependencies</span>
                 <span class="pub-authors">Fan Zhang, <strong>Shiming Fan<sup>‡</sup></strong>, Hua Wang</span><br>
@@ -229,6 +244,7 @@
                 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
                     <span class="service-tag">ICML</span>
                     <span class="service-tag">NeurIPS</span>
+                    <span class="service-tag">ICLR</span>
                     <span class="service-tag">KDD</span>
                     <span class="service-tag">AAAI</span>
                     <span style="color: #888; font-size: 0.85rem; align-self: center;">etc.</span>
